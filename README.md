@@ -29,4 +29,4 @@ power_sp = []; psi_norm = []; bf_psi = []; f = [];
     psi_non_osc_final, f_psi_non_osc_final, Fs, window, method);
 ```
 
-In order to compare the power, periodicity or Bayesian periodicity between two populations y1 and y2, there is a function called 'spectra_comparison' made for this purpose. This function performs a Bayesian paired t-test for each frequency component.
+In order to compare the power, periodicity or Bayesian periodicity between two populations y1 and y2, there is a script (spectra_comparison.m for MATLAB, spectra_comparison in stats_utils.py for Python) made for this purpose. This script performs a Bayesian paired t-test for each frequency component.
