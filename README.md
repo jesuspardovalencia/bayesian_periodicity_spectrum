@@ -23,7 +23,7 @@ method = 'CWT';
 % ------------- calculate the non-oscillatory periodicity -------------
 [psi_non_osc_final, f_psi_non_osc_final] = non_oscillatory_periodicity_spectrum(length(s), Fs, window, method);
 
-% ------------- calculate power and Bayesian periodicity spectra ------
+% ------------- calculate power and (Bayesian) periodicity spectra ----
 power_sp = []; psi_norm = []; bf_psi = []; f = [];
 [power_sp, psi_norm, bf_psi, f] = periodicity_analysis(s,...
     psi_non_osc_final, f_psi_non_osc_final, Fs, window, method);
