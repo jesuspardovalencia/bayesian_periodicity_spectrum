@@ -6,17 +6,3 @@ This code was developed for the computation of the Bayesian periodicity spectrum
 Given a signal of interest s(t), the "Bayesian periodicity spectrum toolbox" first calculates the corresponding periodicity of non-oscilaltory components, depending of the method used for the frequency component decomposition - for this toolbox, the short-time Fourier transform (STFT) or the continuous wavelet transform (CWT). If more than one signal is to be studied and their durations are different, it is recommended to obtain the minimum duration of the signals in order to calculate the periodicity of the non-oscillatory components and thus reduce the calculation time. For the preprocessing of the instantaneous frequency, it is optional to correct for jumps of +-2*pi*Fs and to reduce phase slips in the instantaneous frequency traces, although it is recommended. The periodicity spectrum is estimated as the inverse logarithm of the variance of the instantaneous frequency for each component. Instantaneous frequency traces are divided into segments of equal length in order to estimate the Bayesian periodicity spectrum. This strategy allows to assess the level of evidence for the presence or the absence of oscillatory activity in a single signal.
 
 A typical workflow would be to compute and save the metrics for a signal in MATLAB. This workflow is equivalent in Python.
-
-%% Accelerometry essential tremor
-clc;
-clear;
-close all;
-% Ruta biblioteca funciones Spike-MATLAB
-cedpath = 'D:\CINAC\Tomas_Henriques\ceds64int library\CEDS64ML';
-addpath(cedpath);
-CEDS64LoadLib(cedpath);
-% Ruta funciones periodicity spectrum
-addpath('D:\MATLAB\BayesianPeriodicitySpectrum');
-load('database');
-load('f_psi_non_osc_final.mat');
-load('psi_non_osc_final.mat');
